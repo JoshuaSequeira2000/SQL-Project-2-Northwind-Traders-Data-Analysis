@@ -4,16 +4,16 @@
 
 ## Microsoft Power BI Dashboard.
 ### 1) Products & Categories
-![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/d7ed82d4-8db7-4555-a422-b627a5f95c63)\
+![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/d7ed82d4-8db7-4555-a422-b627a5f95c63)
 
 ### 2) Customers
-![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/b86119bd-e5b3-4c19-938a-ee4ac2e2f3ba)\
+![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/b86119bd-e5b3-4c19-938a-ee4ac2e2f3ba)
 
 ### 3) Employees
-![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/963458e9-6ecf-4159-b09f-90c7b6072ce7)\
+![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/963458e9-6ecf-4159-b09f-90c7b6072ce7)
 
 ### 4) Sales
-![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/0ffea64c-f03f-406b-ac71-2001eb282ac0)\
+![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/0ffea64c-f03f-406b-ac71-2001eb282ac0)
 
 ## Data Insights Using SQL.
 ### 1) Stored procedure to find the customer details, product purchased details, customer loyalty rank, and total amount spent on all products.
