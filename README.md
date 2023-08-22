@@ -105,7 +105,7 @@ GO
 ```
 ![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/a896576c-ad71-4acc-87a6-af06339c4c35)
 
-### 3) Stored procedure to find the total revenue generated for the specified Year and Month.
+#### 3) Stored procedure to find the total revenue generated for the specified Year and Month.
 ```
 create proc Year_Month_Revenue(@Year int, @Month int, @Revenue decimal(9,2) output)
 as
@@ -140,7 +140,7 @@ GO
 ```
 ![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/9fac8a89-4402-4d57-aefc-d78ddddc6597)
 
-### 4) All customers whose order amount is greater than the average order amount for all orders.
+#### 4) All customers whose order amount is greater than the average order amount for all orders.
 ```
 select * from customer c 
 inner join [dbo].[Order] o on c.CustomerId = o.CustomerId 
@@ -161,7 +161,7 @@ GO
 ```
 ![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/f410dc8f-4a7d-4796-aa52-4c4c90266e68)
 
-### 6) The total number of products supplied by each supplier where the IsDiscontinues flag is 0.
+#### 6) The total number of products supplied by each supplier where the IsDiscontinues flag is 0.
 ```
 select case when s.CompanyName is null then 'TOTAL' else s.CompanyName end as Company_Name, -- Used case when to elimite the NULL and replace it with TOTAL
 COUNT(p.ProductId) as Number_Of_Products, -- Counts the number of distinct products.
@@ -175,7 +175,7 @@ GO
 ```
 ![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/845a795c-709a-4137-8e1d-dcd623711976)
 
-### 7) Rank the customer cities of each country based on the total sales generated.
+#### 7) Rank the customer cities of each country based on the total sales generated.
 ```
 select c.Country, c.City, 
 sum(ord.TotalAmount) as Total_Amount, -- Total sales from grouped based on each Country and City.
@@ -191,7 +191,7 @@ GO
 ![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/ee52d3e1-03d4-4c5e-9ffb-45e15a4086f2)
 ![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/b1057b30-b1a4-4dd5-a6db-d1a956ef468e)
 
-### 8) Rank the supplier cities of each country based on the total sales generated.
+#### 8) Rank the supplier cities of each country based on the total sales generated.
 ```
 select s.Country, s.City, 
 sum(ord.TotalAmount) as Total_Amount, -- Total sales from grouped based on each Country and City.
@@ -205,7 +205,7 @@ GO
 ```
 ![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/80ab33c0-e9e3-4bd3-8543-474823bdd378)
 
-### 9) Check if the previous order made by a customer was more than the current order. Count the number of times the current order value was greater than the previous order value.
+#### 9) Check if the previous order made by a customer was more than the current order. Count the number of times the current order value was greater than the previous order value.
 ```
 with Table1 as -- Creating a temporary table
 (select c.CustomerId, c.FirstName, o.OrderId, o.TotalAmount,
@@ -229,7 +229,7 @@ GO
 ```
 ![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/20fa382e-2cbc-4a68-9d25-aff51e46e36d)
 
-### 10) Top 5 most selling and least selling products, based on sales. 
+#### 10) Top 5 most selling and least selling products, based on sales. 
 ```
 select table1.* from
 (select s.Country, p.ProductName, SUM(oi.UnitPrice * oi.Quantity) as Total_Amount, -- Derived table.
@@ -255,7 +255,7 @@ GO
 ```
 ![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/a8ba18c8-7936-4017-a8b9-afdefca32be2)
 
-### 11) Top 5 most selling and least selling products, based on units sold.
+#### 11) Top 5 most selling and least selling products, based on units sold.
 ```
 select Table1.* from
 (select s.Country, p.ProductName, COUNT(oi.Quantity) as Number_Of_Units_Sold, -- Derived table
@@ -281,7 +281,7 @@ GO
 ```
 ![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/cab730c9-8f0d-40f4-8615-b6d960fb6231)
 
-### 12) View to see the number of orders made by each customer.
+#### 12) View to see the number of orders made by each customer.
 ```
 create view Number_Of_Orders_Per_Customer as
 select top 100 percent c.CustomerId, -- Used top 100 percent as Order By clause will not work without it.
@@ -297,7 +297,7 @@ GO
 ```
 ![image](https://github.com/JoshuaSequeira2000/SQL-Project-2-Northwind-Traders-Data-Analysis/assets/92262753/19399d78-33e8-4d1b-ad90-e8f9867b07d6)
 
-### 13) Count of orders made in each month for each year in pivot table format.
+#### 13) Count of orders made in each month for each year in pivot table format.
 ```
 with PivotTable as
 	(select YEAR(OrderDate) as Order_Year, MONTH(OrderDate) as Order_Month, OrderId
